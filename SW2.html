@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        :root{
+            --maroon: #6a0d0d;
+            --maroon-dark: #3e0606;
+            --gold: #d4af37;
+            --gold-soft: #f2e6b8;
+            --card-bg: linear-gradient(180deg, rgba(106,13,13,0.95), rgba(62,6,6,0.95));
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at 10% 10%, #f7e7e7 0%, #f3eded 30%, #efe7e7 100%);
+            padding: 40px;
+            color: #fff;
+        }
+
+        .card-center {
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--card-bg);
+            color: var(--gold);
+            border: 1px solid rgba(212,175,55,0.12);
+        }
+
+        .card-header {
+            background: linear-gradient(90deg, rgba(212,175,55,0.1), rgba(212,175,55,0.02));
+            text-align: center;
+            padding: 18px 16px;
+            border-bottom: 1px solid rgba(212,175,55,0.08);
+        }
+
+        .card-title {
+            margin: 0;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 0.6px;
+        }
+
+        .card-body {
+            padding: 22px;
+        }
+
+        input.form-control {
+            text-align: center;
+            border: 1px solid rgba(212,175,55,0.25);
+            background: rgba(255,255,255,0.95);
+            color: #222;
+            border-radius: 6px;
+            box-shadow: none;
+        }
+
+        input.form-control::placeholder {
+            color: #666;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--maroon-dark);
+            font-weight: 600;
+            border: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-gold:hover {
+            background: #c99f2e;
+            color: var(--maroon-dark);
+        }
+
+        .card-footer {
+            background: rgba(0,0,0,0.06);
+            padding: 16px;
+            text-align: center;
+            border-top: 1px solid rgba(212,175,55,0.06);
+        }
+
+        #output1 {
+            color: var(--gold);
+            font-size: 16px;
+            font-weight: 600;
+            white-space: pre-wrap;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="card card-center">
+        <div class="card-header">
+            <h3 class="card-title">Student Grade Calculator</h3>
+        </div>
+
+        <div class="card-body">
+            <form>
+                <div class="row g-2 mb-3 justify-content-center">
+                    <div class="col-sm-6 col-md-4">
+                        <input type="text" id="Fname" placeholder="First name" class="form-control"/>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <input type="text" id="Lname" placeholder="Last name" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="row g-2 mb-3 justify-content-center">
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <input type="text" id="Math" placeholder="Math" class="form-control"/>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <input type="text" id="English" placeholder="English" class="form-control"/>
+                    </div>
+                    <div class="w-100 d-none d-md-block my-1"></div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <input type="text" id="Science" placeholder="Science" class="form-control"/>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <input type="text" id="ICT" placeholder="ICT" class="form-control"/>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <input type="text" id="PE" placeholder="PE" class="form-control"/>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <input type="text" id="Filipino" placeholder="Filipino" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                    <div class="col-auto">
+                        <button type="button" py-click="adding_numbers" class="btn btn-gold">Compute</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="card-footer text-center">
+            <div id="output1"></div>
+        </div>
+    </div>
+
+    <script type="py" src="SW2.py"></script>
+
+</body>
+</html>
